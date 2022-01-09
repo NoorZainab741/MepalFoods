@@ -28,6 +28,7 @@
                                 <tr>
                                     <th>Sr#</th>
                                     <th>Name</th>
+                                    <th>Image</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -36,21 +37,27 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$category->name}}</td>
+                                        <td>@if($category->image == null)
+                                                No Image
+                                            @else
+                                            <img style="width: 50%; object-fit: contain" class="img-responsive" src="{{asset('storage/'.$category->image)}}" alt="">
+                                            @endif
+                                        </td>
                                         <td>
                                             <a href="{{ route('categories.edit', ['category' => $category->id]) }}"
-                                               class="btn btn-primary btn-sm m-1 p-2" title="Edit">
+                                                class="btn btn-primary btn-sm m-1 p-2" title="Edit">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="{{ route('categories.show', ['category' => $category->id]) }}"
-                                               class="btn btn-success btn-sm m-1 p-2" title="View">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
+{{--                                            <a href="{{ route('categories.show', ['category' => $category->id]) }}"--}}
+{{--                                                class="btn btn-success btn-sm m-1 p-2" title="View">--}}
+{{--                                                <i class="fa fa-eye"></i>--}}
+{{--                                            </a>--}}
                                             <form action="{{ route('categories.destroy', ['category' => $category->id]) }}"
-                                                  method="post">
+                                                method="post">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button type="submit"
-                                                        class="btn btn-danger btn-sm m-1 p-2" title="Delete">
+                                                   class="btn btn-danger btn-sm m-1 p-2" title="Delete">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </form>
@@ -60,7 +67,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{--                        {{$modules->Links()}}--}}
+{{--                        {{$modules->Links()}}--}}
                     </div>
                 </div>
             </div>

@@ -75,10 +75,9 @@ class ManagerController extends Controller
 //        }
 
         $manager->update($request->except('image','password'));
-        $manager->update([
-            'password' => Hash::make($request->password),
-        ]);
-
+        if ($request->has('password') && $request->password !=null){
+            $manager->update(['password' => Hash::make($request->password)]);
+        }
         if ($request->hasFile('image'))
         {
             $image_path = $request->file('image')->store('manager/'.$manager->id.'/image', 'public');

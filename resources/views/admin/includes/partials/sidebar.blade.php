@@ -15,8 +15,23 @@
       <p>{{auth()->user()->role}}</p>
     </div>
       <ul class="sidebar-menu">
-          <li><a class="sidebar-header" href="#"><i data-feather="home"></i><span>Dashboard</span></a>
+          <li class="active"><a class="sidebar-header" href="#"><i
+                      data-feather="menu"></i><span>Categories</span><i
+                      class="fa fa-angle-right pull-right"></i></a>
+              <ul class="sidebar-submenu">
+                  <li class="active"><a href="{{route('categories.index')}}"><i class="fa fa-circle"></i>List</a></li>
+                  <li><a class="active" href="{{route('categories.create')}}"><i class="fa fa-circle"></i>Add New</a></li>
+              </ul>
           </li>
+          <li class="active"><a class="sidebar-header" href="#"><i
+                      data-feather="align-left"></i><span>Products</span><i
+                      class="fa fa-angle-right pull-right"></i></a>
+              <ul class="sidebar-submenu">
+                  <li class="active"><a href="{{route('products.index')}}"><i class="fa fa-circle"></i>List</a></li>
+                  <li><a class="active" href="{{route('products.create')}}"><i class="fa fa-circle"></i>Add New</a></li>
+              </ul>
+          </li>
+
           @if(auth()->user()->role=='Admin')
           <li class="active"><a class="sidebar-header" href="#"><i
                       data-feather="shield"></i><span>Managers</span><i
@@ -28,7 +43,8 @@
           </li>
               @else
                   @endif
-{{--              <li class="active"><a class="sidebar-header" href="#"><i--}}
+
+              {{--              <li class="active"><a class="sidebar-header" href="#"><i--}}
 {{--                          data-feather="users"></i><span>Managers</span><i--}}
 {{--                          class="fa fa-angle-right pull-right"></i></a>--}}
 {{--                  <ul class="sidebar-submenu">--}}
