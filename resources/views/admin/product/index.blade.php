@@ -1,10 +1,10 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Category')
+@section('title', 'Product')
 
-@section('breadcrumb-title', 'Category')
+@section('breadcrumb-title', 'Product')
 @section('breadcrumb-item')
-    <li class="breadcrumb-item">Category</li>
+    <li class="breadcrumb-item">Product</li>
     <li class="breadcrumb-item active">List</li>
 @endsection
 
@@ -14,11 +14,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="pull-left">Category List</h4>
-                        <a href="{{route('categories.create')}}"
+                        <h4 class="pull-left">Product List</h4>
+                        <a href="{{route('products.create')}}"
                            class="btn btn-primary pull-right">
                             <i class="fa fa-plus">
-                                Add New Category</i>
+                                Add New Product</i>
                         </a>
                     </div>
                     <div class="card-body">
@@ -28,29 +28,38 @@
                                 <tr>
                                     <th>Sr#</th>
                                     <th>Name</th>
+                                    <th>Category Name</th>
+                                    <th>Image</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $category)
+                                @foreach($products as $product)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$category->name}}</td>
+                                        <td>{{$product->name}}</td>
+                                        <td>{{$product->category->name}}</td>
+                                        <td>@if($product->image == null)
+                                                No Image
+                                            @else
+                                            <img  class="img-responsive" src="{{asset('storage/'.$product->image)}}" alt="">
+                                            @endif
+                                        </td>
                                         <td>
-                                            <a href="{{ route('categories.edit', ['category' => $category->id]) }}"
-                                               class="btn btn-primary btn-sm m-1 p-2" title="Edit">
+                                            <a href="{{ route('products.edit', ['product' => $product->id]) }}"
+                                                class="btn btn-primary btn-sm m-1 p-2" title="Edit">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="{{ route('categories.show', ['category' => $category->id]) }}"
-                                               class="btn btn-success btn-sm m-1 p-2" title="View">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
-                                            <form action="{{ route('categories.destroy', ['category' => $category->id]) }}"
-                                                  method="post">
+{{--                                            <a href="{{ route('products.show', ['Product' => $product->id]) }}"--}}
+{{--                                                class="btn btn-success btn-sm m-1 p-2" title="View">--}}
+{{--                                                <i class="fa fa-eye"></i>--}}
+{{--                                            </a>--}}
+                                            <form action="{{ route('products.destroy', ['product' => $product->id]) }}"
+                                                method="post">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button type="submit"
-                                                        class="btn btn-danger btn-sm m-1 p-2" title="Delete">
+                                                   class="btn btn-danger btn-sm m-1 p-2" title="Delete">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </form>
@@ -60,7 +69,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{--                        {{$modules->Links()}}--}}
+{{--                        {{$modules->Links()}}--}}
                     </div>
                 </div>
             </div>

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::get();
-        return view('admin.category.index',compact('categories'));
+        $products = Product::get();
+        return view('admin.product.index',compact('products'));
     }
 
     /**
@@ -26,8 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
-
+        return view('admin.product.create');
     }
 
     /**
@@ -38,17 +36,17 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = Category::create($request->except('image'));
+        $product = Product::create($request->except('image'));
 
         if ($request->hasFile('image'))
         {
-            $image_path = $request->file('image')->store('category/'.$category->id.'/icons', 'public');
-            $category->update([
+            $image_path = $request->file('image')->store('product/'.$product->id.'/images', 'public');
+            $product->update([
                 'image' => $image_path
             ]);
         }
 
-        return redirect(route('categories.index'));
+        return redirect(route('products.index'));
     }
 
     /**
@@ -59,8 +57,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $product = Product::findOrFail($id);
-        return view('admin.product.show', compact('product'));
+        //
     }
 
     /**
@@ -71,8 +68,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::findOrFail($id);
-        return view('admin.category.edit', compact('category'));
+        $product = Product::findOrFail($id);
+        return view('admin.product.edit', compact('product'));
     }
 
     /**
@@ -82,17 +79,17 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Product $product)
     {
-        $category->update($request->except('image'));
+        $product->update($request->except('image'));
         if ($request->hasFile('image'))
         {
-            $image_path = $request->file('image')->store('category/'.$category->id.'/icons', 'public');
-            $category->update([
+            $image_path = $request->file('image')->store('product/'.$product->id.'/icons', 'public');
+            $product->update([
                 'image' => $image_path
             ]);
         }
-        return redirect(route('categories.index'));
+        return redirect(route('products.index'));
     }
 
     /**
@@ -103,8 +100,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::findOrFail($id);
-        $category->delete();
+
+        $product = Product::findOrFail($id);
+        $product->delete();
         return redirect()->back();
     }
 }

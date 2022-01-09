@@ -15,11 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/productss', function () {
+    return view('products');
+});
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'CategoryController@index')->name('home');
 
 Route::resource('managers','ManagerController');
+
+Route::resource('categories','CategoryController');
+
+Route::resource('products','ProductController');
 
 Route::get('profile', 'ProfileController@index')->name('profile');
 Route::get('profile/edit', ['uses' => 'ProfileController@edit', 'as' => 'profile.edit']);
