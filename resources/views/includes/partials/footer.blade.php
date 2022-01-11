@@ -1,10 +1,10 @@
-<footer class="footer" style="background-image: url(html/the-zayka/images/bg/01.jpg);">
+<footer class="footer" style="background-image: url({{asset('html/the-zayka/images/bg/01.jpg')}});">
     <div class="object-bottom">
         <!-- <div class="object-left">
           <img class="img-responsive bottom" src="html/the-zayka/images/object/06.png" alt="">
         </div> -->
         <div class="object-right">
-            <img  class="img-responsive bottom" src="html/the-zayka/images/object/16.png" alt="">
+            <img  class="img-responsive bottom" src="{{asset('html/the-zayka/images/object/16.png')}}" alt="">
         </div>
     </div>
     <div class="container">
@@ -57,12 +57,14 @@
             </div> -->
             <div class="col-lg-3 col-md-3 col-sm-6">
                 <div class="opening-time">
-                    <h4 class="text-white mb-30">Open time</h4>
+                    <h4 class="text-white mb-30">Quick links</h4>
                     <ul>
-                        <li>Monday<span class="text-right">8am - 2pm </span></li>
-                        <li>Tuesday<span>10am - 4pm</span></li>
-                        <li>Wednesday<span >11am - 4pm</span></li>
-                        <li>Close on public holidays</li>
+                        <li><a href="{{route('aboutus')}}" style="color: #f1f1f1;">About Us</a></li>
+                        <li><a href="{{route('contactus')}}" style="color: #f1f1f1;">Contact Us</a></li>
+                        @forelse(_getAllCategories() as $category)
+                            <li><a href="{{route('productsbycategory', ['id' => $category->id])}}" style="color: #f1f1f1;">{{ucwords($category->name)}}</a></li>
+                        @empty
+                        @endforelse
                     </ul>
                 </div>
             </div>

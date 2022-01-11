@@ -434,10 +434,10 @@ table tr td a { color: #9d4a97; }
 .head-info a:hover { color: #9d4a97; }
 .head-info ul li { line-height: 22px; }
 .head-info ul li a { line-height: 22px; }
-.head-info-content { padding: 45px 30px 39px; width: 440px; background: url(../images/info-bg.png) no-repeat; position: absolute; top: 44px; z-index: 9; opacity: 0; visibility: hidden; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -moz-transition: all 0.3s ease; }
+.head-info-content { padding: 45px 30px 39px; width: 250px; background: url(../images/info-bg.png) no-repeat; position: absolute; top: 44px; z-index: 9; opacity: 0; visibility: hidden; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -moz-transition: all 0.3s ease; }
 .head-info:hover .head-info-content { opacity: 1; visibility: visible; }
 .head-info-content .info-left { width: 45%; }
-.head-info-content .info-right { width: 45%; }
+.head-info-content .info-right { text-align: center; align-items: center }
 .head-info-content .info-right .address > a { color: #9d4a97; }
 .mega-menu .menu-logo li.head-info { line-height: 22px; }
 .mega-menu .row { margin-left: 0px; margin-right: 0px; }

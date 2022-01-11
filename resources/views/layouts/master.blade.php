@@ -5,6 +5,7 @@
 
     <title>@yield('title') | Mepal Food & Bakers</title>
     @include('includes.partials.styles')
+
 </head>
 <body>
 <!-- Loader starts-->
@@ -36,7 +37,7 @@
 loading -->
  <div id="loading">
   <div id="loading-center">
-    <img src="html/the-zayka/images/loader.gif" alt="">
+    <img src="{{asset('html/the-zayka/images/loader.gif')}}" alt="">
   </div>
 </div>
 </html>

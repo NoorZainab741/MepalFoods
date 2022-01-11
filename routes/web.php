@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,21 +12,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('productsbycategory', function () {
+//    return view('productsbycategory');
+//});
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/contactus', 'WelcomeController@contactus')->name('contactus');
+Route::get('/aboutus', 'WelcomeController@aboutus')->name('aboutus');
 
-Route::get('/productss', function () {
-    return view('products');
-});
+Route::get('/productsbycategory/{id}', 'WelcomeController@productsbycategory')->name('productsbycategory');
 
 Auth::routes();
 
 Route::get('/home', 'CategoryController@index')->name('home');
+
 
 Route::resource('managers','ManagerController');
 

@@ -5,13 +5,13 @@
 @endsection
 @section('content')
     <section class="slider">
-        <div id="rev_slider_3_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-The Zayka2" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <div id="rev_slider_3_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="The Mepal Food & Bakers" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
             <!-- START REVOLUTION SLIDER 5.2.6 fullwidth mode -->
             <div id="rev_slider_3_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.2.6">
                 <ul>  <!-- SLIDE  -->
-                    <li data-index="rs-4" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="revolution/assets/100x50_a617d-slider2-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <li data-index="rs-4" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="{{asset('revolution/assets/100x50_a617d-slider2-bg.jpg')}}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="html/the-zayka/revolution/assets/a617d-slider2-bg.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <img src="{{asset('html/the-zayka/revolution/assets/a617d-slider2-bg.jpg')}}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYER NR. 1 -->
                         <div class="tp-caption   tp-resizeme"
                              id="slide-4-layer-17"
@@ -24,7 +24,7 @@
                              data-transform_out="opacity:0;s:300;e:Back.easeIn;"
                              data-start="400"
                              data-responsive_offset="on"
-                             style="z-index: 5;"><img src="html/the-zayka/revolution/assets/92109-slide2-img8.png" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
+                             style="z-index: 5;"><img src="{{asset('html/the-zayka/revolution/assets/92109-slide2-img8.png')}}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
                         <!-- LAYER NR. 2 -->
                         <div class="tp-caption   tp-resizeme"
                              id="slide-4-layer-15"
@@ -158,9 +158,9 @@
                              style="z-index: 15; white-space: nowrap; font-size: 24px; line-height: 24px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Lilita One;text-transform:uppercase;">Experience the </div>
                     </li>
                     <!-- SLIDE  -->
-                    <li data-index="rs-19" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="revolution/assets/100x50_a617d-slider2-bg.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <li data-index="rs-19" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="{{asset('revolution/assets/100x50_a617d-slider2-bg.jpg')}}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="html/the-zayka/revolution/assets/a617d-slider2-bg.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <img src="{{asset('html/the-zayka/revolution/assets/a617d-slider2-bg.jpg')}}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
                         <!-- LAYER NR. 1 -->
                         <div class="tp-caption   tp-resizeme"
@@ -174,7 +174,7 @@
                              data-transform_out="opacity:0;s:300;e:Back.easeIn;"
                              data-start="400"
                              data-responsive_offset="on"
-                             style="z-index: 5;"><img src="html/the-zayka/revolution/assets/92109-slide2-img8.png" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
+                             style="z-index: 5;"><img src="{{asset('html/the-zayka/revolution/assets/92109-slide2-img8.png')}}" alt="" data-ww="auto" data-hh="auto" data-no-retina> </div>
                         <!-- LAYER NR. 2 -->
                         <div class="tp-caption   tp-resizeme"
                              id="slide-19-layer-15"
@@ -308,7 +308,8 @@
                         </div>
                     </li>
                 </ul>
-                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> </div>
+                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+            </div>
         </div><!-- END REVOLUTION SLIDER -->
     </section>
     <section class="about white-bg">
@@ -344,7 +345,7 @@
         </div>
     </section>
 
-    <section class="our-menu page-section-pt parallax pb-30" style="  background-image: url(assets/images/categorybg1.jpg);">
+    <section class="our-menu page-section-pt parallax pb-30" style="  background-image: url({{asset('assets/images/categorybg1.jpg')}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -360,56 +361,23 @@
                 <section class="pricing-grid">
                     <div class="container">
                         <div class="row">
+                            @if($categories == null)
+                                @else
+                            @foreach($categories as $category)
+                                <a href="{{ route('productsbycategory', ['id' => $category->id]) }}">
                             <div class="col-lg-3 col-md-4 col-sm-4">
                                 <div class="pricing-table">
                                     <div class="pricing-title">
-                                        <h3>Category name</h3>
+                                        <h3>{{ucwords($category->name)}}</h3>
                                     </div>
                                     <div class="pricing-icon">
-                                        <img style="width: 100%; height: 100%; object-fit: contain" src="{{asset('frontend_assets/images/banner/img-02.jpg')}}" alt="">
+                                        <img style="width: 100%; height: 100%; object-fit: contain" src="{{asset('storage/'.$category->image)}}" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="pricing-table">
-                                    <div class="pricing-title">
-                                        <h3>Category name</h3>
-                                    </div>
-                                    <div class="pricing-icon">
-                                        <img style="width: 100%; height: 100%; object-fit: contain" src="{{asset('frontend_assets/images/banner/img-02.jpg')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="pricing-table">
-                                    <div class="pricing-title">
-                                        <h3>Category name</h3>
-                                    </div>
-                                    <div class="pricing-icon">
-                                        <img style="width: 100%; height: 100%; object-fit: contain" src="{{asset('frontend_assets/images/banner/img-02.jpg')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="pricing-table">
-                                    <div class="pricing-title">
-                                        <h3>Category name</h3>
-                                    </div>
-                                    <div class="pricing-icon">
-                                        <img style="width: 100%; height: 100%; object-fit: contain" src="{{asset('frontend_assets/images/banner/img-02.jpg')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="pricing-table">
-                                    <div class="pricing-title">
-                                        <h3>Category name</h3>
-                                    </div>
-                                    <div class="pricing-icon">
-                                        <img style="width: 100%; height: 100%; object-fit: contain" src="{{asset('frontend_assets/images/banner/img-02.jpg')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                                </a>
+                                @endforeach
+                                @endif
                         </div>
                     </div>
                 </section>
