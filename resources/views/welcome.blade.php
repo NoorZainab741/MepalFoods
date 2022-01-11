@@ -274,7 +274,7 @@
                              data-splitin="none"
                              data-splitout="none"
                              data-responsive_offset="on"
-                             style="z-index: 8; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">We are The Zayka temporibus autem quibusdam et aut <br>officiis debitis aut rerum necessitatibus saepe eveniet.
+                             style="z-index: 8; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 300; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">We are The Mepal Food & Bakers temporibus autem quibusdam et aut <br>officiis debitis aut rerum necessitatibus saepe eveniet.
                         </div>
                         <!-- LAYER NR. 10 -->
                         <div class="tp-caption   tp-resizeme"
