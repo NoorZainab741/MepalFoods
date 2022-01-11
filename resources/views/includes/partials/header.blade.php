@@ -35,32 +35,32 @@
                             <!-- menu logo -->
                             <ul class="menu-logo">
                                 <li class="head-info">
-                                    <a href="index.html"><img  id="" src="{{asset('assets/images/logo/logo.png')}}" alt=""> </a>
+                                    <a href="{{route('welcome')}}"><img  id="" src="{{asset('assets/images/logo/logo.png')}}" alt=""> </a>
                                     <div class="head-info-content">
-                                        <div class="info-left pull-left">
-                                            <div class="time">
-                                                <h6>MON – SAT</h6>
-                                                <p>Lunch: 11:30 – 2:00</p>
-                                                <p>Evening: 6:30 – 10:00</p>
-                                            </div>
-                                            <div class="time mt-20">
-                                                <h6>SUNDAY</h6>
-                                                <p>Lunch: 11:30 – 2:00</p>
-                                                <p>Evening: 6:30 – 10:00</p>
-                                            </div>
-                                        </div>
-                                        <div class="info-right pull-right">
+{{--                                        <div class="info-left pull-left">--}}
+{{--                                            <div class="time">--}}
+{{--                                                <h6>MON – SAT</h6>--}}
+{{--                                                <p>Lunch: 11:30 – 2:00</p>--}}
+{{--                                                <p>Evening: 6:30 – 10:00</p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="time mt-20">--}}
+{{--                                                <h6>SUNDAY</h6>--}}
+{{--                                                <p>Lunch: 11:30 – 2:00</p>--}}
+{{--                                                <p>Evening: 6:30 – 10:00</p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+                                        <div class="info-right">
                                             <div class="address">
                                                 <p>1234 North Avenue Luke, IN 360001 </p>
                                                 <p>+ 92 335 0557570</p>
                                                 <p>support@website.com </p>
-                                                <a href="#"><i class="fa fa-map-o pr-10"></i>  Find us here</a>
+{{--                                                <a href="#"><i class="fa fa-map-o pr-10"></i>  Find us here</a>--}}
                                                 <ul class="list-inline mt-15">
                                                     <li><a href="#"> <i class="fa fa-facebook"></i> </a> </li>
                                                     <li><a href="#"> <i class="fa fa-twitter"></i> </a> </li>
                                                     <li><a href="#"> <i class="fa fa-google-plus"></i> </a> </li>
                                                     <li><a href="#"> <i class="fa fa-instagram"></i> </a> </li>
-                                                    <li><a href="#"> <i class="fa fa-tripadvisor"></i> </a> </li>
+{{--                                                    <li><a href="#"> <i class="fa fa-tripadvisor"></i> </a> </li>--}}
                                                 </ul>
                                             </div>
                                         </div>
